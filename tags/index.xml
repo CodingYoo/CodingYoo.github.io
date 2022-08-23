@@ -2,12 +2,27 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tags on CodingYoo`s blog</title>
-    <link>CodingYoo.github.io/tags/</link>
+    <link>https://codingyoo.github.io/tags/</link>
     <description>Recent content in Tags on CodingYoo`s blog</description>
     <image>
-      <url>CodingYoo.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>CodingYoo.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+      <url>https://codingyoo.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://codingyoo.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="CodingYoo.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 23 Aug 2022 16:30:55 +0800</lastBuildDate><atom:link href="https://codingyoo.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>docker容器日志清理</title>
+      <link>https://codingyoo.github.io/tags/docker/</link>
+      <pubDate>Tue, 23 Aug 2022 16:30:55 +0800</pubDate>
+      
+      <guid>https://codingyoo.github.io/tags/docker/</guid>
+      <description>1.查看容器日志大小 find /var/lib/docker/containers/ -name *-json.log |xargs du -sh
+2.全局设置日志大小和生成日志文件个数 vim /etc/docker/daemon.json，添加如下内容
+{ &amp;#34;log-driver&amp;#34;: &amp;#34;json-file&amp;#34;, &amp;#34;log-opts&amp;#34;: { &amp;#34;max-size&amp;#34;: &amp;#34;500m&amp;#34;, &amp;#34;max-file&amp;#34;: &amp;#34;3&amp;#34; } } max-size=500m，意味着一个容器日志大小上限是500M max-file=3，意味着一个容器有三个日志，分别是id+.json、id+1.json、id+2.json
+3.重启docker守护进程
+systemctl daemon-reload systemctl restart docker
+注意：设置的日志大小，只对新建的容器有效。</description>
+    </item>
+    
   </channel>
 </rss>
