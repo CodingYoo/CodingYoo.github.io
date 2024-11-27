@@ -2,12 +2,12 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>那时还是个菜鸟</title>
   
+  <subtitle>勤快的时候会写点东西...</subtitle>
+  <link href="http://www.lph.ink/atom.xml" rel="self"/>
   
-  <link href="http://lph.ink/atom.xml" rel="self"/>
-  
-  <link href="http://lph.ink/"/>
-  <updated>2024-11-27T14:42:41.452Z</updated>
-  <id>http://lph.ink/</id>
+  <link href="http://www.lph.ink/"/>
+  <updated>2024-11-27T14:55:46.779Z</updated>
+  <id>http://www.lph.ink/</id>
   
   <author>
     <name>CodingYoo</name>
@@ -18,10 +18,10 @@
   
   <entry>
     <title>[docker-01] 如何清理docker容器日志</title>
-    <link href="http://lph.ink/2021/09/27/docker-01-%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8docker%E9%83%A8%E7%BD%B2java%E7%A8%8B%E5%BA%8F/"/>
-    <id>http://lph.ink/2021/09/27/docker-01-%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8docker%E9%83%A8%E7%BD%B2java%E7%A8%8B%E5%BA%8F/</id>
+    <link href="http://www.lph.ink/2021/09/27/docker-01-%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8docker%E9%83%A8%E7%BD%B2java%E7%A8%8B%E5%BA%8F/"/>
+    <id>http://www.lph.ink/2021/09/27/docker-01-%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8docker%E9%83%A8%E7%BD%B2java%E7%A8%8B%E5%BA%8F/</id>
     <published>2021-09-27T09:16:34.000Z</published>
-    <updated>2024-11-27T14:42:41.452Z</updated>
+    <updated>2024-11-27T14:55:46.779Z</updated>
     
     <content type="html"><![CDATA[<h3 id="清理-docker-容器日志"><a href="#清理-docker-容器日志" class="headerlink" title="清理 docker 容器日志"></a>清理 docker 容器日志</h3><p>1.查看容器日志大小</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find /var/lib/docker/containers/ -name *-json.log |xargs <span class="built_in">du</span> -sh</span><br></pre></td></tr></table></figure><p>2.全局设置日志大小和生成日志文件个数</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line"> <span class="string">&quot;log-driver&quot;</span>: <span class="string">&quot;json-file&quot;</span>,</span><br><span class="line">  <span class="string">&quot;log-opts&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;max-size&quot;</span>: <span class="string">&quot;500m&quot;</span>,</span><br><span class="line">    <span class="string">&quot;max-file&quot;</span>: <span class="string">&quot;3&quot;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment"># max-size=500m，意味着一个容器日志大小上限是 500M，</span></span><br><span class="line"><span class="comment"># max-file=3，意味着一个容器有三个日志，分别是 id+.json、id+1.json、id+2.json</span></span><br></pre></td></tr></table></figure><p>3.重启 docker 守护进程</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">systemctl daemon-reload</span><br><span class="line">systemctl restart docker</span><br></pre></td></tr></table></figure>]]></content>
     
@@ -35,7 +35,9 @@
     
     
     
-    <category term="docker" scheme="http://lph.ink/tags/docker/"/>
+    <category term="docker" scheme="http://www.lph.ink/tags/docker/"/>
+    
+    <category term="linux" scheme="http://www.lph.ink/tags/linux/"/>
     
   </entry>
   
