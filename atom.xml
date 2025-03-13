@@ -6,7 +6,7 @@
   <link href="http://www.lph.ink/atom.xml" rel="self"/>
   
   <link href="http://www.lph.ink/"/>
-  <updated>2024-11-27T14:55:46.779Z</updated>
+  <updated>2025-03-13T06:10:39.248Z</updated>
   <id>http://www.lph.ink/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>解决Idea中程序爆红，无法加载依赖的问题</title>
+    <link href="http://www.lph.ink/2025/03/13/%E8%A7%A3%E5%86%B3Idea%E4%B8%AD%E7%A8%8B%E5%BA%8F%E7%88%86%E7%BA%A2%EF%BC%8C%E6%97%A0%E6%B3%95%E5%8A%A0%E8%BD%BD%E4%BE%9D%E8%B5%96%E7%9A%84%E9%97%AE%E9%A2%98/"/>
+    <id>http://www.lph.ink/2025/03/13/%E8%A7%A3%E5%86%B3Idea%E4%B8%AD%E7%A8%8B%E5%BA%8F%E7%88%86%E7%BA%A2%EF%BC%8C%E6%97%A0%E6%B3%95%E5%8A%A0%E8%BD%BD%E4%BE%9D%E8%B5%96%E7%9A%84%E9%97%AE%E9%A2%98/</id>
+    <published>2025-03-13T03:17:35.000Z</published>
+    <updated>2025-03-13T06:10:39.248Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="1-报错问题截图"><a href="#1-报错问题截图" class="headerlink" title="1.报错问题截图"></a>1.报错问题截图</h3><h1 id="2-处理步骤"><a href="#2-处理步骤" class="headerlink" title="2.处理步骤"></a>2.处理步骤</h1><h3 id="2-1-删除target内容"><a href="#2-1-删除target内容" class="headerlink" title="2.1 删除target内容"></a>2.1 删除target内容</h3><h3 id="2-2-File-invalidate-Caches-重启即可"><a href="#2-2-File-invalidate-Caches-重启即可" class="headerlink" title="2.2 File-&gt;invalidate Caches 重启即可"></a>2.2 File-&gt;invalidate Caches 重启即可</h3>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;1-报错问题截图&quot;&gt;&lt;a href=&quot;#1-报错问题截图&quot; class=&quot;headerlink&quot; title=&quot;1.报错问题截图&quot;&gt;&lt;/a&gt;1.报错问题截图&lt;/h3&gt;&lt;h1 id=&quot;2-处理步骤&quot;&gt;&lt;a href=&quot;#2-处理步骤&quot; class=&quot;headerli</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>[docker-01] 如何清理docker容器日志</title>
